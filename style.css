@@ -51,30 +51,26 @@ header {
 }
 
 header h2 {
-    margin-left: 6em;
+    margin-left: 9em;
 }
 
 header nav ul {
     list-style-type: none;
     display: flex;
     align-items: center;
+
+
 }
 
 header nav ul li a {
     text-decoration: none;
     color: inherit;
     padding: 1em;
-}
-
-
-
-header nav ul li a {
-
     color: #ffffff;
     position: relative;
     display: inline-block;
-}
 
+}
 
 /***************header after before effect*************************/
 
@@ -82,10 +78,10 @@ header nav ul li a::after,
 header nav ul li a::before {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 90%;
     height: 2px;
     background: linear-gradient(to right, #ff0000, #00ffff);
-    bottom: -5px;
+    bottom: 7px;
     left: 0;
     transform: scaleX(0);
     transform-origin: right;
@@ -93,7 +89,7 @@ header nav ul li a::before {
 }
 
 header nav ul li a::before {
-    top: -5px;
+    top: 7px;
     transform-origin: left;
 }
 
@@ -136,6 +132,10 @@ img.home {
 
 }
 
+.git {
+    width: 1.2rem;
+}
+
 /******************************A propos de moi*******************************/
 
 .about-me {
@@ -167,8 +167,17 @@ img.home {
     height: 45em;
     line-height: 1.8;
     padding: 10px;
-    margin-top: 14em;
-    margin-left: 7em;
+    margin-top: 7em;
+    margin-left: 2em;
+}
+
+.cv {
+    padding: 0.5em;
+    border-radius: 1em;
+    background-color: var(--fourth-color);
+    color: white;
+    text-align: center;
+    width: 5em;
 }
 
 /**************************Animation css*****************************************/
@@ -422,17 +431,21 @@ h2.competences {
 
 footer {
     background-color: var(--fourth-color);
+    display: flex;
+    justify-content: center;
     color: white;
     text-align: center;
     padding: 1em;
+    height: 4em;
 }
 
 /************Media queries tablette****************/
 @media screen and (min-width:768px) and (max-width: 1023px) {
 
-    .navigation {
-        display: none;
+    header h2 {
+        margin-left: 0em;
     }
+   
 
     /*** Zone Accueil***/
 
@@ -528,11 +541,8 @@ footer {
 
 /******************Media queries pour les petits écrans*******************/
 
-@media screen and (max-width: 767px) {
 
-    .navigation {
-        display: none;
-    }
+@media screen and (max-width: 767px) {
 
     h2.project,
     h2.contact,
@@ -540,6 +550,10 @@ footer {
     h2.competences {
         margin-left: 2em;
         margin-top: 3em;
+    }
+
+    header h2 {
+        margin-left: 0em;
     }
 
     .section-littledivider {
@@ -564,7 +578,7 @@ footer {
     img.home {
         mix-blend-mode: multiply;
         width: 100%;
-    
+
     }
 
     /*** Zone A propos de moi ***/
@@ -577,7 +591,7 @@ footer {
         min-height: 80vh;
         margin-bottom: 2em;
         gap: 1em;
-        
+
     }
 
     .about-text {
@@ -609,7 +623,7 @@ footer {
         margin-top: 2em;
         margin-bottom: 2em;
         margin-left: 0rem;
-        
+
     }
 
     /*** Zone projects ***/
@@ -619,21 +633,26 @@ footer {
         display: flex;
         flex-direction: column;
         margin-bottom: 2em;
-        
+
     }
 
     .image-container img {
-        width: 80%; /* Réduit la largeur des images à 80% de leur conteneur */
-        height: auto; /* Maintient le ratio d'aspect */
-        margin-bottom: 1em; /* Ajoute un espacement entre les images */
+        width: 80%;
+        /* Réduit la largeur des images à 80% de leur conteneur */
+        height: auto;
+        /* Maintient le ratio d'aspect */
+        margin-bottom: 1em;
+        /* Ajoute un espacement entre les images */
     }
 
     .image-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 100%; /* Assurez-vous que le conteneur prend toute la largeur */
-        margin-left: 0; /* Supprime le décalage gauche */
+        width: 100%;
+        /* Assurez-vous que le conteneur prend toute la largeur */
+        margin-left: 0;
+        /* Supprime le décalage gauche */
     }
 
     /*** Zone contact ***/
@@ -670,25 +689,64 @@ footer {
     }
 }
 
-/* Show the navigation menu when active */
-.navigation.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    /* Adjust based on your header height */
-    right: 0;
-    background-color: var(--fourth-color);
-    width: 100%;
-    padding: 1em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
 
-.navigation.active ul {
-    flex-direction: column;
-    align-items: center;
-}
 
-.navigation.active ul li {
-    margin: 10px 0;
+/* Media queries for smaller screens */
+
+@media screen and (max-width: 767px) {
+    .header_nav_menu {
+        display: none;
+    }
+    .burger-menu {
+        display: block;
+    }
+
+    .burger-actif {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 80px;
+        background-color: var(--fourth-color);
+        z-index: 1000;
+    }
+    #nav-menu.navigation {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        gap: .2em;
+    }
+
+    .burger {
+        height: .3rem;
+        width: 2.5rem;
+        border-radius: 6px;
+        background-color: black;
+    }
+    
+    .deux {
+        height: .3rem;
+        width: 2.5rem;
+        border-radius: 6px;
+        background-color: black;
+    }
+    
+    .trois {
+        height: .3rem;
+        width: 2.5rem;
+        border-radius: 6px;
+        background-color: black;
+    }
+    .un-actif {
+        opacity: 0;
+    }
+    
+    .deux-actif {
+        transform: translateY(5px) rotate(45deg);
+    }
+    
+    .trois-actif {
+        transform: translateY(-3px) rotate(-45deg);
+    }
 }
