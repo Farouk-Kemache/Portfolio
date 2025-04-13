@@ -15,7 +15,7 @@
 body {
     background-color: var(--primary-color);
     font-family: Arial, sans-serif;
-    /* scroll-behavior: smooth; */
+
 }
 
 /**********************Divider************************************/
@@ -58,6 +58,7 @@ header nav ul {
     list-style-type: none;
     display: flex;
     align-items: center;
+    margin-right: 8rem;
 
 
 }
@@ -177,7 +178,14 @@ img.home {
     background-color: var(--fourth-color);
     color: white;
     text-align: center;
-    width: 5em;
+    text-decoration: none;
+    width: 10em;
+    margin-top: 1em;
+}
+
+.cv a {
+    color: white;
+    text-decoration: none;
 }
 
 /**************************Animation css*****************************************/
@@ -261,11 +269,11 @@ h2.competences {
     width: 70%;
     font-size: 17px;
     margin-left: 10em;
-    margin-top: 3em;
+    margin-top: 2em;
 
 }
 
-/*****************slide projet*******************/
+/*****************slide zone projet*******************/
 
 .image-container {
     height: auto;
@@ -291,7 +299,7 @@ h2.competences {
     transform: scale(1.1);
 }
 
-/* Style du slider */
+
 .slider {
     display: none;
     position: fixed;
@@ -306,8 +314,8 @@ h2.competences {
 }
 
 .slider img {
-    width: 50%;
-    height: 60%;
+    width: 60%;
+    height: 80%;
     object-fit: cover;
 }
 
@@ -336,7 +344,7 @@ h2.competences {
     right: 20px;
 }
 
-/*conteneur de texte*/
+
 .slider-text {
     color: white;
     font-size: 1.2rem;
@@ -381,7 +389,7 @@ h2.competences {
     gap: 1em;
 }
 
-/* Conteneur du formulaire */
+
 .contact-form {
     background-color: #fff;
     padding: 20px;
@@ -390,7 +398,6 @@ h2.competences {
     width: 40em;
 }
 
-/* Styles des labels et inputs */
 .contact-form label {
     display: block;
     margin-bottom: 8px;
@@ -405,7 +412,6 @@ h2.competences {
     border-radius: 4px;
 }
 
-/* Bouton */
 .contact-form button {
     background-color: #28a745;
     color: #fff;
@@ -419,7 +425,7 @@ h2.competences {
     background-color: #218838;
 }
 
-/* Image */
+
 #contact img {
     width: 35%;
     mix-blend-mode: multiply;
@@ -445,7 +451,7 @@ footer {
     header h2 {
         margin-left: 0em;
     }
-   
+
 
     /*** Zone Accueil***/
 
@@ -481,16 +487,18 @@ footer {
         padding: 5px;
         margin-top: 2em;
         margin-left: 0;
+
     }
 
     .about-image img {
-        width: 30em;
+        width: 35em;
         height: auto;
         border-radius: 1em;
         margin-bottom: 10em;
     }
 
     /*** Zone competences***/
+
     #competences {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -502,8 +510,10 @@ footer {
     }
 
     /*** Zone projects***/
+
     #projets p {
-        margin-left: 2rem;
+        margin-left: 8rem;
+        padding: 5px;
     }
 
     .image-container {
@@ -513,9 +523,11 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 1em;
     }
 
     /*** Zone contact***/
+
     #contact {
         margin-top: 4em;
         display: flex;
@@ -530,17 +542,19 @@ footer {
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         width: 30em;
+        margin-right: 4rem;
 
     }
 
-    /* Image */
+
     #contact img {
-        width: 70%;
+        width: 80%;
+        margin-right: 4rem;
+        margin-bottom: 5rem;
     }
 }
 
-/******************Media queries pour les petits écrans*******************/
-
+/******************Media queries mobile*******************/
 
 @media screen and (max-width: 767px) {
 
@@ -563,6 +577,7 @@ footer {
     }
 
     /*** Zone Accueil ***/
+
     #accueil {
         display: flex;
         flex-direction: column;
@@ -572,16 +587,15 @@ footer {
         min-height: 80vh;
         gap: 4em;
         margin-bottom: 2em;
-
     }
 
     img.home {
         mix-blend-mode: multiply;
         width: 100%;
-
     }
 
     /*** Zone A propos de moi ***/
+
     .about-container {
         display: flex;
         flex-direction: column;
@@ -596,10 +610,8 @@ footer {
 
     .about-text {
         max-width: 90%;
-        /* Adjust width for better fit */
         line-height: 1.5;
-        /* Adjust line-height for better text spacing */
-        padding: 5px;
+        padding: 4px;
         margin-top: 1em;
         margin-left: 2rem;
     }
@@ -610,9 +622,11 @@ footer {
         border-radius: 1em;
         margin-bottom: 1em;
         margin-left: 2rem;
+        margin-top: 1em;
     }
 
     /*** Zone competences ***/
+
     #competences {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -627,22 +641,12 @@ footer {
     }
 
     /*** Zone projects ***/
-    #projects {
-        height: auto;
-        min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2em;
 
-    }
-
-    .image-container img {
-        width: 80%;
-        /* Réduit la largeur des images à 80% de leur conteneur */
-        height: auto;
-        /* Maintient le ratio d'aspect */
-        margin-bottom: 1em;
-        /* Ajoute un espacement entre les images */
+    #projets p {
+        width: 70%;
+        font-size: 17px;
+        margin-left: 3rem;
+        margin-top: 2em;
     }
 
     .image-container {
@@ -650,19 +654,29 @@ footer {
         flex-direction: column;
         justify-content: center;
         width: 100%;
-        /* Assurez-vous que le conteneur prend toute la largeur */
-        margin-left: 0;
-        /* Supprime le décalage gauche */
+        margin-left: 1.2rem;
+        gap: 1em;
     }
 
+
+
+    .image-container img {
+        width: 90%;
+        object-fit: cover;
+    }
+
+
     /*** Zone contact ***/
+
     #contact {
         margin-top: 4em;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 2em;
-        /* Add margin to separate from the footer */
+        width: 100%;
+        gap: 2em;
+        margin-left: 1rem;
     }
 
     .contact-form {
@@ -671,32 +685,26 @@ footer {
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         width: 90%;
-        /* Adjust width for better fit */
     }
 
-    /* Image */
     #contact img {
         width: 80%;
-        /* Adjust image size */
-        margin-bottom: 2em;
-        /* Add margin for better spacing */
+        margin-right: 1rem;
+        margin-bottom: 5rem;
     }
 
-    /* Show the burger menu icon on smaller screens */
+    /*********Menu burger mobile***********/
 
     .burger-menu {
         display: flex;
     }
 }
 
-
-
-/* Media queries for smaller screens */
-
 @media screen and (max-width: 767px) {
     .header_nav_menu {
         display: none;
     }
+
     .burger-menu {
         display: block;
     }
@@ -711,6 +719,7 @@ footer {
         background-color: var(--fourth-color);
         z-index: 1000;
     }
+
     #nav-menu.navigation {
         margin-left: 0;
         display: flex;
@@ -724,28 +733,29 @@ footer {
         border-radius: 6px;
         background-color: black;
     }
-    
+
     .deux {
         height: .3rem;
         width: 2.5rem;
         border-radius: 6px;
         background-color: black;
     }
-    
+
     .trois {
         height: .3rem;
         width: 2.5rem;
         border-radius: 6px;
         background-color: black;
     }
+
     .un-actif {
         opacity: 0;
     }
-    
+
     .deux-actif {
         transform: translateY(5px) rotate(45deg);
     }
-    
+
     .trois-actif {
         transform: translateY(-3px) rotate(-45deg);
     }

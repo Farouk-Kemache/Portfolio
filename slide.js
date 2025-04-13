@@ -8,8 +8,8 @@ const nextBtn = document.querySelector(".next");
 
 
 const descriptions = [
-    "Photosnap : Le but de cet exercice était d'effectuer un grid avec les images.",
-    "Projet 2 : Application web interactive pour la gestion des tâches.",
+    "Photosnap-Page d'accueil : Reproduction de la page d’accueil d’un site pour photographes. Intégration responsive HTML/CSS à partir d’une maquette, avec mise en avant visuelle des stories et des fonctionnalités. Travail axé sur le design en grille, le positionnement d’images et l’équilibre typographique.",
+    "Photosnap-Page Stories :Intégration responsive d’une galerie de récits visuels. Grille CSS fluide, effet de hover soigné et mise en page dynamique basée sur une maquette. Projet utile pour travailler l’accessibilité, les layouts flexibles et la gestion du contenu dynamique.",
     "Projet 3 : Portfolio moderne avec animations fluides.",
     "Projet 4 : E-commerce avec système de paiement intégré.",
     "Projet 5 : Dashboard analytique avec graphiques interactifs.",
