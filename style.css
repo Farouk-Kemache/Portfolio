@@ -309,9 +309,9 @@ h2.competences {
 }
 
 .slider img {
-    width: 60%;
-    height: 80%;
-    object-fit: cover;
+    width: auto; 
+    height: 80%; 
+    object-fit: contain;
 }
 
 .close,
