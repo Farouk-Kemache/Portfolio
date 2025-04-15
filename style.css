@@ -686,8 +686,9 @@ footer {
         margin-left: 0;
         margin-right: 0;
     }
+
     p.contact-text {
- 
+
         text-align: center;
         margin: 0 15px;
     }
@@ -704,6 +705,7 @@ footer {
     #contact img {
         width: 80%;
     }
+
     /*********Menu burger mobile***********/
 
     .burger-menu {
@@ -723,16 +725,18 @@ footer {
     .burger-actif {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         position: absolute;
         left: 0;
-        top: 80px;
-        background-color: var(--fourth-color);
+        top: 63.3px;
+        background-color: var(--primary-color);
         z-index: 1000;
-        
         width: 100vw;
-        height: 40vh;
-        gap: 1em;
+        height: 50vh;
         margin: 0;
+        padding: 1rem;
+        border-top: 1px solid var(--fourth-color);
+        border-bottom: 1px solid var(--fourth-color);
     }
 
     #nav-menu.navigation {
